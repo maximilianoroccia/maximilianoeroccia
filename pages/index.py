@@ -1,7 +1,9 @@
 import reflex as rx
 import utils as utils
-from components.navbar import navbar
-from views.header import header
+from components import navbar
+from views import header, links
+from styles import styles
+
 
 class State(rx.State):
     pass
@@ -17,5 +19,14 @@ class State(rx.State):
 def index() -> rx.Component:
     return rx.box(
         navbar(),
-        header()
+        rx.center(
+           rx.vstack(
+               header(),
+               links(),
+                width=styles.MAX_WIDTH,
+                max_width=styles.BIG_WIDTH,
+                margin_y=styles.Spacings.SMALL.value,
+                padding=styles.Sizes.SMALL.value
+           ) 
+        )
     )

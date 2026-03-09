@@ -15,12 +15,18 @@ BIG_WIDTH = "600px"
 
 class Sizes(Enum):
     ZERO = "0px !important"
-    SMALL = "0.5em"
-    MEDIUM = "0.75em"
-    DEFAULT = "1em"
-    LARGE = "1.5em"
-    BIG = "2em"
-    VERY_BIG = "4em"
+    SMALL = "2"
+    MEDIUM = "3"
+    DEFAULT = "4"
+    LARGE = "5"
+    BIG = "8"
+    VERY_BIG = "9"
+    
+class ImageSize(Enum):
+    SMALL = "10PX"
+    MEDIUM = "20PX"
+    DEFAULT = "30PX"
+    LARGE = "50PX"
 
 class Spacings(Enum):
     ZERO = "0"
@@ -38,8 +44,14 @@ class Spacings(Enum):
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "font_weight": FontWeight.REGULAR.value,
-    "background_color": PageColor.DARK.value,  
-    "background_image": "back.png",
+    "background": "url('/back.png') ", 
+    "background_color": PageColor.DARK.value, 
+    "background_size": "cover",
+    "background_position": "center",
+    "background_repeat": "no-repeat",
+    "width": MAX_WIDTH
     
 }
+
+
 
