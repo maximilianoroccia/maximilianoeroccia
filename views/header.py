@@ -5,9 +5,9 @@ def header() -> rx.Component:
     return rx.hstack(
         rx.vstack(
             rx.hstack(
-                rx.text("Maxi", height=FontWeight.MEDIUM, color=TextColor.BLUE),
-                rx.text("Emb", height=FontWeight.MEDIUM, color=TextColor.GREEN),
-                rx.text("Dev", height=FontWeight.MEDIUM, color=TextColor.BLUE),
+                rx.text("Maxi", weight="bold", size="5", color=TextColor.BLUE),
+                rx.text("Emb", weight="bold", size="5", color=TextColor.GREEN),
+                rx.text("Dev", weight="bold", size="5", color=TextColor.BLUE),
                 spacing=Spacings.ZERO.value,
             ),
             rx.text("Hola mi nombre es Maxi Roccia", color=TextColor.LIGHT),
@@ -18,7 +18,9 @@ def header() -> rx.Component:
         ),
         rx.avatar(
             fallback= "MED", 
-            size=Sizes.VERY_BIG.value,
+            size=styles.NumSize.BIG.value,
             src="/perfil_web.png"), 
-        width=styles.BIG_WIDTH
+        width=styles.MAX_WIDTH,
+        align_items="center"
+        
     )

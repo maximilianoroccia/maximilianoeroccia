@@ -1,5 +1,5 @@
 import reflex as rx 
-from styles import Sizes, Spacings, styles, ImageSize
+from styles import Sizes, Spacings, styles, NumSize
 
 
 def link_button(
@@ -13,21 +13,26 @@ def link_button(
         rx.hstack(
             rx.image(
                 src=image,
-                width=ImageSize.DEFAULT.value,
-                height=ImageSize.DEFAULT.value,
-                border_radius= "5px",
-                border="1px solid #b6b6b8",
-                alt=title
+                alt=title,
+                width=Sizes.MEDIUM.value,
+                height=Sizes.MEDIUM.value,
+                border_radius=Sizes.XSMALL.value,
+                border="1px solid #e6e6e8"
             ),
             rx.vstack(
                 rx.text(title),
                 rx.text(body),
-                spacing=Spacings.ZERO.value
+                color= styles.TextColor.LIGHT.value,
+                spacing=Spacings.ZERO.value,
+                align="start"
             ),
             align="center",
-            width=styles.MAX_WIDTH,
+            width=styles.TOTAL_WIDTH
         ),
         on_click=rx.redirect(path=url, is_external=is_external),
-        width=styles.MAX_WIDTH,
-        padding=Sizes.SMALL.value
+        width=styles.TOTAL_WIDTH,
+        height="auto",
+        padding_y=Sizes.XSMALL.value,
+        padding_x=Sizes.SMALL.value,
+        variant="classic"
     )

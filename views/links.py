@@ -1,5 +1,6 @@
 import reflex as rx
 from components import link_button, title
+from styles import styles
 
 def links() -> rx.Component:
     return rx.vstack(
@@ -29,5 +30,7 @@ def links() -> rx.Component:
             "/icons/blog.svg",
             "/blog",
             is_external= False
-        )
+        ),
+        spacing=styles.Spacings.MEDIUM_SMALL.value,
+        width=styles.TOTAL_WIDTH
     )
