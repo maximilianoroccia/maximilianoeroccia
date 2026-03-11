@@ -1,7 +1,7 @@
 from enum import Enum
 
 class PageColor(Enum):
-    EXTRA_LIGHT = "#d0e2ff"  
+    EXTRA_LIGHT = "#c2d6f7"  
     LIGHT = "#4e91fc"
     DARK = "#011538"
     MEDIUM = "#1159cf" 

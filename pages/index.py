@@ -1,7 +1,7 @@
 import reflex as rx
 import utils as utils
-from components import navbar
-from views import header, links, proy_index
+from components import navbar, form
+from views import header, links, proy_index, footer
 from styles import styles
 
 
@@ -22,12 +22,12 @@ def index() -> rx.Component:
         rx.center(
            rx.vstack(
                header(),
-               rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue'),
+               rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue', height=styles.Sizes.LINE.value),
                links(),
-               rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue'),
+               rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue', height=styles.Sizes.LINE.value),
                proy_index(),
-               rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue'),
-               
+               rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue', height=styles.Sizes.LINE.value),
+               form(),
                width=styles.TOTAL_WIDTH,
                max_width=styles.MAX_WIDTH,
                align="start",
@@ -35,5 +35,7 @@ def index() -> rx.Component:
                margin_y=styles.NumSize.SMALL.value,
                padding=styles.NumSize.SMALL.value
            )
-        )
+        ),
+        rx.separator(size=styles.NumSize.DEFAULT.value, color_scheme='blue', height=styles.Sizes.LINE.value),
+        footer()
     )

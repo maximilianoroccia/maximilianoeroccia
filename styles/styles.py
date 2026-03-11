@@ -16,6 +16,7 @@ MAX_WIDTH = "600px"
 
 class Sizes(Enum):
     ZERO = "0px !important"
+    LINE = "3px"
     XSMALL = "5PX"
     SMALL = "20px"
     MEDIUM = "30px"
@@ -49,7 +50,8 @@ BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "font_weight": FontWeight.REGULAR.value,
     "color": TextColor.DARK.value,
-    "background": "url('/back.png') ", 
+    "background": "url('/background.png')",
+    "background_blend_mode": "color-dodge", 
     "background_color": PageColor.DARK.value, 
     "background_size": "cover",
     "background_position": "center",
